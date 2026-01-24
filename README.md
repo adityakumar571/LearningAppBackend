@@ -90,4 +90,3 @@ A full-stack **Online Learning Platform** inspired by Utkarsh App, designed for 
 
 ---
 
-## **Folder Structure**
