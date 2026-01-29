@@ -89,4 +89,20 @@ A full-stack **Online Learning Platform** inspired by Utkarsh App, designed for 
 - `certificates` → course completion certificates
 
 ---
+## User Diagram 
+
+User Signup/Login
+      ↓
+    OTP Sent
+      ↓
+   Verify OTP → JWT
+      ↓
+Email/Password login (optional)
+      ↓
+Set Password (if first login)
+      ↓
+Access Profile / Update / Courses
+      ↓
+Admin Actions (Get all users, change role, delete user)
+
 

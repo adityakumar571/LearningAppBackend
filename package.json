@@ -1,0 +1,32 @@
+{
+  "name": "learningappbackend",
+  "version": "1.0.0",
+  "description": "A full-stack **Online Learning Platform** inspired by Utkarsh App, designed for students, instructors, and admins. This platform supports course management, lessons, quizzes, live classes, progress tracking, notifications, and certificates.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adityakumar571/LearningAppBackend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adityakumar571/LearningAppBackend/issues"
+  },
+  "homepage": "https://github.com/adityakumar571/LearningAppBackend#readme",
+  "dependencies": {
+    "axios": "^1.13.4",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.1.5",
+    "nodemon": "^3.1.11"
+  }
+}
