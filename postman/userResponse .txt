@@ -1,0 +1,28 @@
+Register or Login (OTP based)
+Endpoint: POST /api/auth/registerOrLogin
+
+| Status | Description            | Sample Response                                                                                                                                             |
+| ------ | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 200    | Existing user OTP sent | `{ "status":200, "data":{ "_id":"64e...", "phone":"9876543210", "isNew":false }, "message":"Existing user - OTP sent successfully" }`                       |
+| 200    | New user created       | `{ "status":200, "data":{ "_id":"64e...", "userId":"user123", "phone":"9876543210", "isNew":true }, "message":"New user created - OTP sent successfully" }` |
+| 400    | Missing phone          | `{ "status":400, "data":null, "message":"Phone number is required" }`                                                                                       |
+| 400    | Invalid phone format   | `{ "status":400, "data":null, "message":"Phone number must be exactly 10 digits" }`                                                                         |
+
+2️ Verify OTP
+Endpoint: POST /api/auth/verifyOtp
+| Status | Description    | Sample Response                                                                                                                                        |
+| ------ | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 200    | OTP verified   | `{ "status":200, "data":{ "_id":"64e...", "phone":"9876543210", "name":"Amrita", "authToken":"<JWT_TOKEN>" }, "message":"OTP verified successfully" }` |
+| 400    | User not found | `{ "status":400, "data":null, "message":"User not found" }`                                                                                            |
+| 400    | Invalid OTP    | `{ "status":400, "data":null, "message":"Invalid OTP" }`                                                                                               |
+
+Resend OTP
+Endpoint: POST /api/auth/resendOtp
+| Status | Description    | Sample Response                                                                                        |
+| ------ | -------------- | ------------------------------------------------------------------------------------------------------ |
+| 200    | OTP resent     | `{ "status":200, "data":{ "phone":"9876543210", "otp":"5678" }, "message":"OTP resent successfully" }` |
+| 400    | Phone missing  | `{ "status":400, "data":null, "message":"Phone number is required" }`                                  |
+| 400    | User not found | `{ "status":400, "data":null, "message":"User not found" }`                                            |
+
+Login with Password
+Endpoint: POST /api/auth/loginWithPassword
